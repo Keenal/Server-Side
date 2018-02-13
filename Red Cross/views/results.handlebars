@@ -1,0 +1,24 @@
+{{body}}
+<div class="navbar">
+  <a href="/"><img src="./img/redcross.png" height="50px" style="float:left;padding-left:10px;"></a>
+  <a href="/login"><i class="fa fa-sign-in fa-3x" style="float:right;padding-right:20px;"></i></a>
+</div>
+<div align="center" class="Container">
+  <div class="userForm">
+      <h1>Reports</h1>
+      <table>
+          <th>Full Name</th>
+          <th>message</th>
+          <th>Current Location</th>
+          <th>Date</th>
+          {{#each report}}
+              <tr>
+                  <td>{{firstName}} {{lastName}}</td>
+                  <td>{{message}}</td>
+                  <td>{{currentLocation}}</td>
+                  <td>{{date}}</td>
+              </tr>
+          {{/each}}
+      </table>
+  </div>
+</div>

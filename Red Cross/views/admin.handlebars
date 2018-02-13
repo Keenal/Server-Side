@@ -1,0 +1,48 @@
+{{body}}
+<div class="navbar">
+  <a href="/"><img src="./img/redcross.png" height="50px" style="float:left;padding-left:10px;"></a>
+  <a href="/login"><i class="fa fa-sign-out fa-3x" style="float:right;padding-right:20px;" title="log out"></i></a>
+  <h5 style="float:right;padding-right:20px;">Welcome, {{user.username}}</h5>
+</div>
+<div align="center" class="Container">
+    
+    <div class="userForm">
+        <form id="login-Form" method="post" action="/admin">
+            <br>
+            <input type="text" name="username" placeholder="(username)" class="box">
+            <br><br>
+            <input type="password" name="pw" placeholder="(password)" class="box">
+            <br><br>
+             <select name="type" class="box">
+              <option name="user" value="user">user</option>
+              <option name="admin" value="admin">admin</option>
+            </select>
+            <br><br>
+            <input type="submit" name="submit" value="Create" class="searchBtn">
+        </form>
+    </div>
+       
+    <div class="userForm">
+        <table>
+            <th>Disaster</th>
+            <th>Total</th>
+            <tr>
+                <td><a href="/detail?id=1">disaster 1</a></td>
+                <td>{{d1}}</td>
+            </tr>
+            <tr>
+                <td><a href="/detail?id=2">disaster 2</a></td>
+                <td>{{d2}}</td>
+            </tr>
+            <tr>
+                <td><a href="/detail?id=3">disaster 3</a></td>
+                <td>{{d3}}</td>
+            </tr>
+            <tr>
+                <td><a href="/detail?id=4">disaster 4</a></td>
+                <td>{{d4}}</td>
+            </tr>
+        </table>
+    </div>
+    
+</div>

@@ -1,0 +1,44 @@
+{{body}}
+<div class="navbar">
+  <a href="/"><img src="./img/redcross.png" height="50px" style="float:left;padding-left:10px;"></a>
+  <a href="/"><i class="fa fa-sign-out fa-3x" style="float:right;padding-right:20px;" title="log out"></i></a>
+  <h5 style="float:right;padding-right:20px;">Welcome, {{user.username}}</h5>
+</div>
+<div align="center" class="Container">
+    <form method="post" action="/report" class="reportForm">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h1>Create a Report</h1>
+        <p style="color:white">File a new report to let your loved ones know you're safe and well.</p>
+        <i class="fa fa-user fa-3x" aria-hidden="true"></i>
+        <input type="text" name="firstName" placeholder="(first name)" class="box">
+        <input type="text" name="lastName" placeholder="(last name)" class="box">
+        <br><br>
+        <i class="fa fa-phone fa-3x" aria-hidden="true"></i>
+        <input type="text" maxlength="3" name="areaCode" placeholder="012"  class="box" style="width:100px">
+        <input type="text" maxlength="3" name="threeDigit" placeholder="345" class="box" style="width:100px">
+        <i class="fa fa-minus fa-2x" aria-hidden="true"></i>
+        <input type="text" maxlength="4 "name="fourDigit" placeholder="6789" class="box" style="width:130px">
+        <br><br>
+        <i class="fa fa-envelope fa-3x" aria-hidden="true"></i>
+        <input type="text" name="email" placeholder="(email)" class="box">
+        <br><br>  
+        <i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
+        <input type="text" name="currentLocation" placeholder="(currentLocation)" class="box">
+        <br><br>   
+        <i class="fa fa-home fa-3x" aria-hidden="true"></i>
+        <textarea type="text" name="status" placeholder="(status of residence)" class="box1"></textarea>
+        <br><br>
+        <i class="fa fa-comment fa-3x" aria-hidden="true"></i>
+        <textarea type="text" name="message" placeholder="(message)" class="box1"></textarea>
+        <br><br>
+        <i class="fa fa-exclamation-triangle fa-3x" aria-hidden="true"></i>
+        <select name="disaster" class="box">
+          <option name="d1" value="1">1</option>
+          <option name="d2" value="2">2</option>
+          <option name="d3" value="3">3</option>
+          <option name="d4" value="4">4</option>
+        </select>
+        <br><br>
+        <input type="submit" name="submit" value="Submit" class="searchBtn">
+    </form>
+</div>

@@ -1,0 +1,26 @@
+{{body}}
+<div class="navbar">
+  <a href="/"><img src="./img/redcross.png" height="50px" style="float:left;padding-left:10px;"></a>
+  <a href="/login"><i class="fa fa-sign-in fa-3x" style="float:right;padding-right:20px;"></i></a>
+</div>
+<div align="center" class="Container">
+    <form method="post" action="/"  class="searchForm">
+        <a><img src="./img/redcross.png" height="100px" style="padding-top:10px;"></a>
+        <h1>Search for your loved ones</h1>
+        <p style="color:white">We need their full name and phone number to locate them in our system.</p>
+        <i class="fa fa-user fa-3x" aria-hidden="true"></i>
+        <input type="text" name="firstName" placeholder="(first name)" class="box">
+        <input type="text" name="lastName" placeholder="(last name)" class="box">
+        <br><br>
+        <i class="fa fa-phone fa-3x" aria-hidden="true"></i>
+        <input type="text" maxlength="3" name="areaCode" placeholder="012"  class="box" style="width:100px">
+        <input type="text" maxlength="3" name="threeDigit" placeholder="345" class="box" style="width:100px">
+        <i class="fa fa-minus fa-2x" aria-hidden="true"></i>
+        <input type="text" maxlength="4"name="fourDigit" placeholder="6789" class="box" style="width:130px">
+        <br><br>
+        <input type="submit" name="submit" value="Search" class="searchBtn">
+        <br>
+        <p style="font-size:20px; color:white">*File a Report*</p>
+        <p style="color:white">Are you in an affected area and want to file a report? <a href="/login">Log in</a> using the username and password given to you at the shelter.</p>
+    </form>
+</div>

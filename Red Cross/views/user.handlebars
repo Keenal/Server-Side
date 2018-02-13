@@ -1,0 +1,33 @@
+{{body}}
+<div class="navbar">
+  <a href="/"><img src="./img/redcross.png" height="50px" style="float:left;padding-left:10px;"></a>
+  <a href="/"><i class="fa fa-sign-out fa-3x" style="float:right;padding-right:20px;" title="log out"></i></a>
+  <h5 style="float:right;padding-right:20px;">Welcome, {{user.username}}</h5>
+</div>
+<div align="center" class="Container">
+    <form method="get" action="/report" class="userForm">
+        <br><br>
+        <h1>New Report</h1>
+        <p>File a new report to let you friends and family know that you are safe and well.</p>
+        <br><br>
+        <input type="submit" name="submit" value="Report" class="searchBtn">
+    </form>
+    <br>
+    <div class="userForm">
+        <h1>Previous Reports</h1>
+        <table>
+            <th>Full Name</th>
+            <th>Phone Number</th>
+            <th>Current Location</th>
+            <th>Date</th>
+            {{#each report}}
+                <tr>
+                    <td>{{firstName}} {{lastName}}</td>
+                    <td>{{phone}}</td>
+                    <td>{{currentLocation}}</td>
+                    <td>{{date}}</td>
+                </tr>
+            {{/each}}
+        </table>
+    </div> 
+</div>

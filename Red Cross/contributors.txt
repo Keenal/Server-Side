@@ -1,0 +1,14 @@
+
+
+Submitted by: Paul Shoultz and Keenal Shah
+
+Login Credentials: 
+
+1. Username: paul 
+   Password: 123
+   
+2. Username: admin
+   Password: admin
+   
+3. Username: keenal
+   Password: 456

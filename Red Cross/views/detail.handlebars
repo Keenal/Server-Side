@@ -1,0 +1,28 @@
+{{body}}
+<div class="navbar">
+  <a href="/"><img src="./img/redcross.png" height="50px" style="float:left;padding-left:10px;"></a>
+  <a href="/"><i class="fa fa-sign-out fa-3x" style="float:right;padding-right:20px;" title="log out"></i></a>
+  <h5 style="float:right;padding-right:20px;">Welcome, {{user.username}}</h5>
+</div>
+<div align="center" class="container">
+  <div align="center" class="userForm">
+    <br><br>
+    <h1>disaster {{disasterId}}</h1>
+    <table>
+        <th>Full Name</th>
+        <th>Phone Number</th>
+        <th>Current Location</th>
+        <th>Date</th>
+        <th>Action</th>
+        {{#each report}}
+            <tr>
+                <td>{{firstName}} {{lastName}}</td>
+                <td>{{phone}}</td>
+                <td>{{currentLocation}}</td>
+                <td>{{date}}</td>
+                <td><a href="/detail?id={{disasterId}}&_id={{_id}}">delete</a></td>
+            </tr>
+        {{/each}}
+    </table>
+  </div>
+</div> 
