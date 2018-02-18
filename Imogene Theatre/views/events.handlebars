@@ -1,0 +1,44 @@
+<script id="events"
+type="text/x-handlebars-template">
+</script>
+
+
+<body>
+
+<!-- navigation bar -->
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Imogene Theatre</a>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/events">Upcoming Events</a></li>
+          <li><a href="/buy">Buy Tickets</a></li>
+          <li><a href="/admin">Admin</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Lists upcoming events -->
+  <div class='container'>
+    <div class='row'>
+      <div class='col-xs-12'>
+        <div class="centered-content">
+          <h2>Upcoming Events</h2>
+          <p>Upcoming events at The Imogene Theatre in downtown Milton &#8211; minutes from Pensacola.</p>
+          <!-- loops through each event -->
+            {{#each events}}
+            <p>
+            {{day}} &#8211; <a class="profileLink" href={{link}}>{{title}}</a><br />
+            </p> 
+            {{/each}}
+            <p>Learn more about any of these events on our event page:<br />
+            <a href="https://www.facebook.com/TheImogeneTheatre/events">https://www.facebook.com/TheImogeneTheatre/events</a></p>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+

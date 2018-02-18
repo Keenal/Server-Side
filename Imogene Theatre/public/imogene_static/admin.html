@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Imogene Theatre</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" media="all" href="css/app.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Imogene Theatre</a>
+        <ul class="nav navbar-nav">
+          <li><a href="events.html">Upcoming Events</a></li>
+          <li><a href="buy.html">Buy Tickets</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+          <h3>Current Events</h3>
+          <hr/>
+          <ul class="list-group">
+            <li class="list-group-item">
+                Show #1
+                <a href="#" class="btn btn-danger btn-xs">Delete</a>
+            </li>
+            <li class="list-group-item">
+                Show #2
+                <a href="#" class="btn btn-danger btn-xs">Delete</a>
+            </li>
+          </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+          <h3>Add an Event</h3>
+          <hr/>
+          <form class="form-horizontal" method="post" action="/admin/update/">
+                <div class="form-group">
+                  <label for="id" class="col-sm-2 control-label">ID</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="id" name="id" placeholder="ID">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="title" class="col-sm-2 control-label">Title</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+                  </div>
+                </div>
+                  <div class="form-group">
+                  <label for="title" class="col-sm-2 control-label">Date / Time</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="datetime" name="datetime" placeholder="Date / Time">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="description" class="col-sm-2 control-label">Description</label>
+                  <div class="col-sm-10">
+                      <textarea class="form-control" rows="3" id="description" name="description" ></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="link" class="col-sm-2 control-label">Link</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="link" name="link" placeholder="Link to Facebook">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="link" class="col-sm-2 control-label">Ticket Level 1</label>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" id="price1" name="price1" placeholder="Price"/>
+                  </div>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="desc1" name="desc1" placeholder="Level Description"/>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="link" class="col-sm-2 control-label">Ticket Level 2</label>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" id="price1" name="price2" placeholder="Price"/>
+                  </div>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="desc1" name="desc2" placeholder="Level Description"/>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="link" class="col-sm-2 control-label">Ticket Level 3</label>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" id="price1" name="price3" placeholder="Price"/>
+                  </div>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="desc1" name="desc3" placeholder="Level Description"/>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="link" class="col-sm-2 control-label">Ticket Level 4</label>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" id="price1" name="price4" placeholder="Price"/>
+                  </div>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="desc1" name="desc4" placeholder="Level Description"/>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="link" class="col-sm-2 control-label">Ticket Level 5</label>
+                  <div class="col-sm-2">
+                    <input type="text" class="form-control" id="price1" name="price5" placeholder="Price"/>
+                  </div>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="desc1" name="desc5" placeholder="Level Description"/>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </div>
+              </form>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

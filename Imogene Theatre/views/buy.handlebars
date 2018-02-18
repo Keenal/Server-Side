@@ -1,0 +1,46 @@
+
+
+<body>
+<!-- navigation bar -->
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Imogene Theatre</a>
+        <ul class="nav navbar-nav">
+          <li><a href="/events">Upcoming Events</a></li>
+          <li class="active"><a href="/buy">Buy Tickets</a></li>
+          <li><a href="/admin">Admin</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- calendar event -->
+  <div class='container'>
+    <div class='row'>
+      <div id="bottom-content">
+        <div class='package'>
+          <div class="col-xs-12 col-md-offset-4 col-md-offset-4 col-md-5 col-sm-offset-4 col-sm-6">
+            <div style="float:left; clear:none;">
+              <a class="btn btn-info" id="event_calendar_link" href="https://redevelopmentinc.thundertix.com/?display=calendar"><i class='fa fa-calendar' aria-hidden='true'></i> Calendar of Events</a>
+            </div>
+          </div>
+  
+            <!-- loops through the events and lists the name, description, date, time, and buy button -->
+            {{#each events}}
+                <div class='row'>
+                    <div class='col-xs-12'>
+                      <p>{{title}}</p>
+                      <p>{{description}}</p>
+                      <p>{{daytime}}</p>
+                      <a class="btn btn-primary buy_tickets_button" href="selection/{{id}}">Buy Tickets</a>
+                    </div>
+                  </div>
+            {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+

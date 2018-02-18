@@ -1,0 +1,8 @@
+div.centered-content {text-align: center;}
+.centered {
+    margin: 0 auto;
+    text-align: center;
+    width: 800px;
+}
+input.ticket-type {width: 50px;} /* Ticket quantity fields */
+a#cancel-order {margin-left: 10px;}

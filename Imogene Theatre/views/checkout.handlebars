@@ -1,0 +1,93 @@
+
+
+  <body>
+<!-- navigation bar -->
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Imogene Theatre</a>
+          <ul class="nav navbar-nav">
+            <li><a href="/events">Upcoming Events</a></li>
+            <li class="active"><a href="/buy">Buy Tickets</a></li>
+            <li><a href="/admin">Admin</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class='container'>
+      <div id="order">
+        <div id='order_total_value' class='grand_total_wrap'>
+          <div class='grand_total'>Total: {{total}}</div>
+          
+          
+          <script>
+            function myTimeFunction(){
+              setTimeout(function(){
+                alert("Your session has expired.", 6000)
+              })
+            }
+          </script>
+          
+            <script>
+              function orderFunction(){
+                alert("Thank you for your order");
+                }
+            </script>
+               
+          
+        </div>
+        <table class='table'>
+          <thead>
+            <tr>
+              <th style="padding: 8px 0">QTY</th>
+              <th>Price</th>
+              <th style="padding: 8px 0"></th>
+              <th>Description</th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <!-- go through each loop and display the quantity and calculate the subtotal and total -->
+          {{#each events.levels}}
+          {{#if quantity}}
+          <tr class="ticket">
+            
+            <td>{{quantity}}</td>
+            <td><span>{{price}}.00</span></td>
+            <td></td>
+            <td>{{description}} </td>
+            <td></td>
+            <td></td>
+            <td class='money'><span>{{totalPrice}}.00</span></td>
+          </tr>
+          {{/if}}
+          
+          {{/each}}
+
+          <tr>
+            <td colspan="4"></td>
+            <td style="padding: 8px 0"><b>SUBTOTAL</b></td>
+            <td class="money"></td>
+            <td class="money"><div id="order_subtotal_value">{{subtotal}}.00</div></td>
+          </tr>
+          <tr>
+            <td colspan="4"></td>
+            <td><div id='order_total_label'><b>TOTAL</b></div></td>
+            <td></td>
+            <td class='money'>  <div id='order_total_value'>{{total}}</div></td>
+          </tr>
+        </table>
+        <form id="order_tickets" action="/" accept-charset="UTF-8" method="get">
+          
+          <input type="submit" name="commit" value="Order" onclick="orderFunction()" onclick="myTimeFunction()"   class="btn btn-primary col-xs-12 col-sm-3 col-md-3" />
+  
+          
+          <a href="/selection/{{events.id}}" id="cancel-order" class="btn btn-default col-xs-12 col-sm-3 col-md-3">Cancel</a>
+          
+        </form>
+        
+      </div>
+  </body>
